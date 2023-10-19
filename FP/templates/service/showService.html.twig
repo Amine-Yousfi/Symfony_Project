@@ -1,0 +1,34 @@
+<h1>Service:{{name}} </h1>
+{% set a=5 %} /{#declarer une var avec TWIG#}
+la valeur de a {{a}} 
+{% set PI=3.14 %}
+{{PI}}
+{% set ch='HOLLAAA'%}
+{{ch}}
+
+{% set tab=[1,2,3] %}
+
+{% if a==5 %}
+<h1> la valeur de {{a}}</h1>
+{% endif %}
+
+{% set b=5 %}
+{% set c=2 %}
+{% set d=true %}
+
+{% if ((a==1 and b>0 ) or not c==0) and d is defined %}
+  {% set resultat =(d+a*b)/c%}
+  {{resultat}}
+{% else %}
+  <h2>c'est un erreur</h2>
+{% endif %}
+
+{% if 'Fabien' start with 'F'%}
+   commence par F
+{% endif %}
+
+
+{% if 'Fabien' ends with 'n'%}
+   commence par n
+{% endif %}
+
